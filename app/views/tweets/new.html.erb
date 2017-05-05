@@ -1,0 +1,9 @@
+<h1> Envie seu tweet </h1>
+
+<%= form_for :tweet, url: { action: "create" } do |f| %>
+	<div class="form-group">
+    	<%= f.label "Tweet" %>
+    	<%= f.text_field :tweet, class: "form-control" %>
+	</div>
+	<%= f.button "Enviar tweet", id: "createBtn"%>
+<% end %>

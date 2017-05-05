@@ -14,10 +14,11 @@
 ActiveRecord::Schema.define(version: 20170505160341) do
 
   create_table "tweets", force: :cascade do |t|
-    t.string   "tweet",      null: false
+    t.string   "tweet",                                                                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x00000003d89c00>"
     t.integer  "user_id"
   end
 

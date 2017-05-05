@@ -1,0 +1,14 @@
+<h1>Lista de Tweets</h1>
+
+<% if @tweet.blank? %>
+  <p>Nenhum tweet</p>
+<% else %>
+  <% @tweet.each do |t| %>
+    <tr>
+      <td><%= link_to t.tweet, t %></td>
+      <td><%= link_to t.user.name, t.user.name %></td>
+      <td><%= link_to "Edit", edit_tweet_path(t) %></td>
+      <td><%= link_to "Delete", t, method: :delete %></td>
+    </tr>
+  <% end %>
+<% end %>

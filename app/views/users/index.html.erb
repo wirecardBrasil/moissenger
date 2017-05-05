@@ -7,7 +7,7 @@
       <h3><%= u.email %></h3>
       <h3><%= u.department %></h3>
       <h3><%= u.about %></h3>
-      <p><%= link_to "Editar", u, method: :edit %></p>
+      <p><%= link_to "Editar", edit_user_path(u.id) %></p>
       <p><%= link_to "Delete", u, method: :delete %></p>
     </div>
   </article>

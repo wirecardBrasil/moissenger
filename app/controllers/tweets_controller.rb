@@ -11,16 +11,16 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.order("created_at ASC").all
     Tweet.new(params["tweet"].symbolize_keys).save
+    @tweet = Tweet.order("created_at DESC").all
     render "index"
   rescue => e
     puts "-------------> #{e.message}"
   end
 
   def destroy
-    @tweet = Tweet.all
     Tweet.find(params[:id]).destroy
+    @tweet = Tweet.order("created_at DESC").all
     render "index"
   end
 end

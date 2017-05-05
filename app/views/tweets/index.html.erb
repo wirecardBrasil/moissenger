@@ -7,11 +7,11 @@
       <p><%= link_to "Delete", t, method: :delete %></p>
     </div>
     <div class="meta">
-      <time class="published" datetime="2015-11-01"><%= t.created_at %></time>
+      <time class="published"><%= t.created_at.strftime("Enviado no dia %m/%d/%Y as %Hh%M") %></time>
       <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
     </div>
   </article>
 <% end %>
 <% if @tweet.blank? %>
-  <p>Nenhum tweet</p>
+  <p>Nenhum tweet foi enviado ainda :(</p>
 <% end %>

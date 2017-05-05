@@ -1,0 +1,16 @@
+<h1>Lista de Usuários</h1>
+
+<% @user.each do |u| %>
+  <article class="post">
+    <div class="title">
+      <h2><%= u.name %></h2>
+      <h3><%= u.email %></h3>
+      <h3><%= u.department %></h3>
+      <h3><%= u.about %></h3>
+      <p><%= link_to "Delete", u, method: :delete %></p>
+    </div>
+  </article>
+<% end %>
+<% if @user.blank? %>
+  <p>Nenhum usuário</p>
+<% end %>

@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(params["user"])
+    @user = User.all
+    user = User.new(params["user"].symbolize_keys)
     user.save
     render "index"
   rescue => e

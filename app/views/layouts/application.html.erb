@@ -13,10 +13,12 @@
 
       <!-- Header -->
       <header id="header">
-        <h1><%= link_to "Moip Twitter", root_path %></h1>
+        <%= link_to root_path do %>
+          <img src="/images/Asset2.png" alt="Logo" height="42px" style="margin-top: 5px; margin-left: 10px;" />
+        <% end %>
         <nav class="links">
           <ul>
-            <li><%= link_to "Novo Tweet", new_tweet_path %></li>
+            <li><%= link_to "Nova Mensagem", new_tweet_path %></li>
             <li><%= link_to "Listar usuários", users_path %></li>
             <li><%= link_to "Criar usuário", new_user_path %></li>
           </ul>

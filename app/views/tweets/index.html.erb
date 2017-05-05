@@ -1,4 +1,4 @@
-<h1>Lista de Tweets</h1>
+<h1>Lista de Mensagens</h1>
 
 <% @tweet.each do |t| %>
   <article class="post">
@@ -8,7 +8,7 @@
     </div>
     <div class="meta">
       <time class="published"><%= t.created_at.strftime("Enviado no dia %m/%d/%Y as %Hh%M") %></time>
-      <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+      <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/Asset1.png" alt="" height="35px"/></a>
     </div>
   </article>
 <% end %>

@@ -8,15 +8,19 @@ class TweetsController < ApplicationController
   end
 
   def new
-
   end
 
   def create
     puts "============== #{params["tweet"].inspect}"
-    tweet = Tweet.new(tweet: params["tweet"]["tweet"])
+    tweet = Tweet.new(params["tweet"])
     tweet.save
     render "index"
   rescue => e
     puts "-------------> #{e.message}"
+  end
+
+  def destroy
+    Tweet.find(params[:id]).destroy
+    render "index"
   end
 end

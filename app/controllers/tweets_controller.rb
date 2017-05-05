@@ -4,15 +4,15 @@ class TweetsController < ApplicationController
   end
 
   def index
-    @tweet = Tweet.all
+    @tweet = Tweet.order("created_at DESC").all
   end
 
   def new
   end
 
   def create
-    @tweet = Tweet.find(:all, order: "created_at ASC")
-    Tweet.new(tweet: params["tweet"]["tweet"]).save
+    @tweet = Tweet.order("created_at ASC").all
+    Tweet.new(params["tweet"].symbolize_keys).save
     render "index"
   rescue => e
     puts "-------------> #{e.message}"

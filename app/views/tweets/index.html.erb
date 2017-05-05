@@ -1,11 +1,16 @@
 <h1>Lista de Tweets</h1>
 
 <% @tweet.each do |t| %>
-  <tr>
-    <td><%= link_to t.tweet, t %></td>
-    <td><%#= link_to t.user.name, t.user.name %></td>
-    <td><%= link_to "Delete", t, method: :delete %></td>
-  </tr>
+  <article class="post">
+    <div class="title">
+      <h2><%= t.tweet %></h2>
+      <p><%= link_to "Delete", t, method: :delete %></p>
+    </div>
+    <div class="meta">
+      <time class="published" datetime="2015-11-01"><%= t.created_at %></time>
+      <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+    </div>
+  </article>
 <% end %>
 <% if @tweet.blank? %>
   <p>Nenhum tweet</p>

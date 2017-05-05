@@ -11,14 +11,15 @@ class TweetsController < ApplicationController
   end
 
   def create
-    tweet = Tweet.new(params["tweet"])
-    tweet.save
+    @tweet = Tweet.all
+    Tweet.new(tweet: params["tweet"]["tweet"]).save
     render "index"
   rescue => e
     puts "-------------> #{e.message}"
   end
 
   def destroy
+    @tweet = Tweet.all
     Tweet.find(params[:id]).destroy
     render "index"
   end

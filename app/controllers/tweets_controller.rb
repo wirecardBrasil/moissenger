@@ -8,7 +8,6 @@ class TweetsController < ApplicationController
   end
 
   def new
-
   end
 
   def create
@@ -17,5 +16,10 @@ class TweetsController < ApplicationController
     render "index"
   rescue => e
     puts "-------------> #{e.message}"
+  end
+
+  def destroy
+    Tweet.find(params[:id]).destroy
+    render "index"
   end
 end

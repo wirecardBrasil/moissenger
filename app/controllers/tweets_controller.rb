@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.all
+    @tweet = Tweet.find(:all, order: "created_at ASC")
     Tweet.new(tweet: params["tweet"]["tweet"]).save
     render "index"
   rescue => e

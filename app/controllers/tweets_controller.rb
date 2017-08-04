@@ -19,12 +19,13 @@ class TweetsController < ApplicationController
     render "index"
   rescue => e
     Rails.logger.error "-------------> #{e.message}"
+    redirect_to action: :index
   end
 
   def destroy
     current_tweet = Tweet.find(params[:id])
     current_tweet.destroy if current_tweet.user_id == current_user.id
     @tweet = Tweet.order("created_at DESC").all
-    render "index"
+    redirect_to action: :index
   end
 end

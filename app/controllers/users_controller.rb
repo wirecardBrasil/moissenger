@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     render "index"
   rescue => e
     Rails.logger.error "-------------> #{e.message}"
+    redirect_to action: :index
   end
 
   def update
@@ -29,6 +30,7 @@ class UsersController < ApplicationController
     render "index"
   rescue => e
     Rails.logger.error "-------------> #{e.message}"
+    redirect_to action: :index
   end
 
   def edit

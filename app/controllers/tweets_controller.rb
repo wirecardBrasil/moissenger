@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.order("created_at DESC").all
     render "index"
   rescue => e
-    puts "-------------> #{e.message}"
+    Rails.logger.error "-------------> #{e.message}"
   end
 
   def destroy

@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_filter :authenticate_user!
+  
   def show
     @tweet = Tweet.find(params[:id])
   end

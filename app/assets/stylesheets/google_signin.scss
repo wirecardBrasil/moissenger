@@ -1,0 +1,38 @@
+#google_sign_btn {
+  display: inline-block;
+  background: #dd4b39;
+  color: white;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#google_sign_btn:hover {
+  background: #e74b37;
+  cursor: hand;
+  cursor: pointer;
+}
+span.label {
+  font-weight: bold;
+}
+span.icon {
+  background: image-url("gsignin/btn_red_32.png") transparent 5px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  border-right: #bb3f30 1px solid;
+}
+span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto',arial,sans-serif;
+}
+
+#gSignInWrapper{
+  text-align: center;
+  margin-top: 20px;
+}

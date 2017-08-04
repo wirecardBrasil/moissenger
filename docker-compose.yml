@@ -10,7 +10,7 @@ services:
     entrypoint: [bin/entrypoint]
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     environment:
-      G_OAUTH_CLIENT_ID: 693253514521-38cg20426ockf20ltjjlanu7qao63hop.apps.googleusercontent.com
-      G_OAUTH_CLIENT_SECRET: RawjYoQPLneSrAdfH3i2cnzm
+      G_OAUTH_CLIENT_ID: 635054333693-k30dbs56bbp10csjklg4o894p7kt7d6q.apps.googleusercontent.com
+      G_OAUTH_CLIENT_SECRET: hjZ8jiVwr9QNKfvJ48Pfjd9L
     ports:
       - "3000:3000"

@@ -10,9 +10,7 @@ class User < ActiveRecord::Base
     data = access_token.info
     user = User.where(provider: access_token.provider, uid: access_token.uid).first
     return user if user.present?
-    Rails.logger.info "-----------------> #{user.inspect}"
     registered_user = User.where(email: data["email"]).first
-    Rails.logger.info "=================> #{registered_user.inspect}"
     if registered_user
       registered_user.save
       return registered_user

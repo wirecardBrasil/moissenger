@@ -19,7 +19,9 @@
           <ul>
             <li><%= link_to "Nova Mensagem", new_tweet_path %></li>
             <li><%= link_to "Listar usuários", users_path %></li>
-            <li><%= link_to "Editar Perfil", edit_user_path(current_user.id) %></li>
+            <% if current_user.present? && current_user.id.present? %>
+              <li><%= link_to "Editar Perfil", edit_user_path(current_user.id) %></li>
+            <% end %>
           </ul>
         </nav>
         <nav class="main">

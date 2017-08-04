@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20170804134031) do
     t.string   "about",              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "providers"
+    t.string   "provider"
     t.string   "uid"
   end
 

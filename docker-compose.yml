@@ -7,7 +7,7 @@ services:
         BUNDLE_ARGS: ""
     volumes:
       - .:/moissenger
-    entrypoint: [bin/entrypoint]
+    entrypoint: bundle exec
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     environment:
       G_OAUTH_CLIENT_ID: 635054333693-k30dbs56bbp10csjklg4o894p7kt7d6q.apps.googleusercontent.com

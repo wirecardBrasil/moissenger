@@ -6,15 +6,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
 		  @user = User.find_for_google_oauth2(request.env["omniauth.auth"], current_user)
 		  if @user.persisted?
-		    flash[:notice] = "devise.omniauth_callbacks.success", kind: "Google"
+		    flash[:notice] = "Sucesso"
 		    sign_in_and_redirect @user, event: :authentication
 		  else
-		    flash[:error] = "devise.omniauth_callbacks.failure", kind: "Google", reason: "database error"
+		    flash[:error] = "Ops"
 		    redirect_to new_user_session_url
 		  end
 
 		else
-			flash[:error] = "devise.failure.invalid_domain", kind: "Google"
+			flash[:error] = "Ops de novo"
 			redirect_to new_user_session_url
 		end
 	end

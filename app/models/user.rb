@@ -4,8 +4,6 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true, length: { maximum: 255 }
   validates :email, presence: true, length: { maximum: 255 }
-  validates :encrypted_password, presence: true, length: { maximum: 255 }
-  validates :department, presence: true, length: { maximum: 100 }
   has_many :tweets
 
 	def self.find_for_google_oauth2(access_token, signed_in_resource=nil)

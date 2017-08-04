@@ -1,14 +1,14 @@
-<h1> Editar usuário </h1>
+<h1> Editar Perfil </h1>
 
 <%= form_for @user, url: { action: "update" }, method: "PUT" do |f| %>
-    <div class="form-group">
-        <%= f.label "Usuário" %>
-        <%= f.text_field :user_name, class: "form-control" %>
-    </div>
+  <div class="form-group">
+    <%= f.label "Usuário" %>
+    <%= f.text_field :user_name, class: "form-control" %>
+  </div>
 
 	<div class="form-group">
-    	<%= f.label "Nome" %>
-    	<%= f.text_field :name, class: "form-control" %>
+    <%= f.label "Nome" %>
+    <%= f.text_field :name, class: "form-control" %>
 	</div>
 
 	<div class="form-group">
@@ -16,20 +16,20 @@
 		<%= f.text_field :email, class: "form-control" %>
 	</div>
 
-    <div class="form-group">
-        <%= f.label "Senha" %>
-        <%= f.password_field :encrypted_password, class: "form-control" %>
-    </div>
+  <div class="form-group">
+    <%= f.label "Senha" %>
+    <%= f.password_field :encrypted_password, class: "form-control" %>
+  </div>
 
-    <div class="form-group">
-        <%= f.label "Departamento" %>
-        <%= f.text_field :department, class: "form-control" %>
-    </div>
+  <div class="form-group">
+    <%= f.label "Departamento" %>
+    <%= f.text_field :department, class: "form-control" %>
+  </div>
 
-    <div class="form-group">
-        <%= f.label "Sobre" %>
-        <%= f.text_field :about, class: "form-control" %>
-    </div>
-    
-    <%= f.button "Salvar usuário", id: "createBtn"%>
+  <div class="form-group">
+    <%= f.label "Sobre" %>
+    <%= f.text_field :about, class: "form-control" %>
+  </div>
+
+  <%= f.button "Salvar Perfil", id: "createBtn"%>
 <% end %>

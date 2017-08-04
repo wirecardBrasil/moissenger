@@ -1,4 +1,4 @@
-<h1>Lista de Usuários</h1>
+<h1>Lista de Moipers</h1>
 
 <% @user.each do |u| %>
   <article class="post">
@@ -8,7 +8,7 @@
       <h3><%= u.department %></h3>
       <h3><%= u.about %></h3>
       <p><%= link_to "Editar", edit_user_path(u.id) %></p>
-      <p><%= link_to "Delete", u, method: :delete %></p>
+      <p><%= link_to "Deletar", u, method: :delete %></p>
     </div>
   </article>
 <% end %>

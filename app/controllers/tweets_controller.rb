@@ -22,7 +22,9 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    Tweet.find(params[:id]).destroy
+    if (params[:user_id] == current_user.id)
+      Tweet.find(params[:id]).destroy
+    end
     @tweet = Tweet.order("created_at DESC").all
     render "index"
   end

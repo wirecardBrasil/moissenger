@@ -5,9 +5,8 @@
 <h1>Envie sua mensagem</h1>
 
 <%= form_for :tweet, url: { action: "create" } do |f| %>
+  <%= f.hidden_field :user_id, :value => @user_id%>
   <div class="form-group">
-    <%= f.label "Usuario" %>
-    <%= f.text_field :user_id %>
     <%= f.label "Mensagem" %>
     <%= f.text_field :tweet, class: "form-control" %>
   </div>

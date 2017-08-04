@@ -10,7 +10,7 @@
       <time class="published"><%= t.created_at.strftime("Enviado no dia %m/%d/%Y as %Hh%M") %></time>
       <a href="#" class="author">
         <span class="name">
-          <%= t.user_id.present? ? t.user.id : "Sem user no banco de dados" %>
+          <%= t.user_id.present? ? t.user.name : "Sem user no banco de dados" %>
         </span>
         <img src="images/Asset1.png" alt="" height="35px"/>
       </a>

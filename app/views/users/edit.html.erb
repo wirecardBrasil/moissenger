@@ -6,25 +6,25 @@
     <%= f.text_field :user_name, class: "form-control" %>
   </div>
 
-	<div class="form-group">
+	<div class="form-group user-spacement">
     <%= f.label "Nome" %>
     <%= f.text_field :name, class: "form-control" %>
 	</div>
 
-	<div class="form-group">
+	<div class="form-group user-spacement">
 		<%= f.label "E-mail" %>
 		<%= f.text_field :email, class: "form-control" %>
 	</div>
 
-  <div class="form-group">
+  <div class="form-group user-spacement">
     <%= f.label "Departamento" %>
     <%= f.text_field :department, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group user-spacement">
     <%= f.label "Sobre" %>
     <%= f.text_field :about, class: "form-control" %>
   </div>
 
-  <%= f.button "Salvar Perfil", id: "createBtn"%>
+  <%= f.button "Salvar Perfil", id: "createBtn", class: "user-spacement" %>
 <% end %>

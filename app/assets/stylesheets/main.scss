@@ -3045,9 +3045,9 @@ body {
   text-decoration: none;
   border-bottom: 0;
   color: #aaaaaa;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
-  text-indent: 4em;
+  // text-indent: 4em;
   width: 4em;
 }
 
@@ -3429,7 +3429,10 @@ body.is-menu-visible #menu {
 
 }
 
-
 .dropdown-menu {
   font-size: 13px;
+}
+
+.logout {
+  width: 100px;
 }

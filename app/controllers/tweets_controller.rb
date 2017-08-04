@@ -10,9 +10,10 @@ class TweetsController < ApplicationController
   end
 
   def new
+    @user_id = session[:user_id]
   end
 
-  def create
+  def create    
     Tweet.new(params["tweet"].symbolize_keys).save
     @tweet = Tweet.order("created_at DESC").all
     render "index"

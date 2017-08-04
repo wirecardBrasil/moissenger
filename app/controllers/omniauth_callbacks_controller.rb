@@ -4,7 +4,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
 		if User.domain_valid?(request.env["omniauth.auth"].info.email)
 
-		  @user = User.find_for_google_oauth2(request.env["omniauth.auth"], current_user)
+		  @user = User.find_for_google_oauth2(request.env["omniauth.auth"])
+		  Rails.logger.info("+++++++++++++++++++>>> #{current_user.inspect}")
+		  Rails.logger.info("+++++++++++++++++++>>> #{@user.inspect}")
+		  
 		  if @user.persisted?
 		    flash[:notice] = "Sucesso"
 		    sign_in_and_redirect @user, event: :authentication

@@ -2,11 +2,11 @@
   <img src="/images/Asset3.png" alt="Logo" height="100px" style="margin-top: 5px; margin-left: 10px;" />
 </div>
 
-<h1> Envie sua mensagem </h1>
+<h1>Envie sua mensagem</h1>
 
 <%= form_for :tweet, url: { action: "create" } do |f| %>
   <div class="form-group">
-    <%= f.label "Tweet" %>
+    <%= f.label "Mensagem" %>
     <%= f.text_field :tweet, class: "form-control" %>
   </div>
 
@@ -16,5 +16,5 @@
       <%#= f.text_field :name, class: "form-control" %>
     <%# end %>
   </div> -->
-  <%= f.button "Enviar tweet", id: "createBtn"%>
+  <%= f.button "Enviar Mensagem", id: "createBtn", class: "tweet-btn-space" %>
 <% end %>

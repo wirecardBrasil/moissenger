@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170804134031) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
-    t.string   "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007fadbb36e258>"
+    t.string   "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x00000003d89c00>"
     t.integer  "user_id"
   end
 

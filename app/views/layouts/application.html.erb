@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Twitter Moip</title>
+    <title>Moissenger</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-
     <!-- Wrapper -->
     <div id="wrapper">
 
@@ -20,7 +19,7 @@
           <ul>
             <li><%= link_to "Nova Mensagem", new_tweet_path %></li>
             <li><%= link_to "Listar usuários", users_path %></li>
-            <li><%= link_to "Criar usuário", new_user_path %></li>
+            <li><%= link_to "Editar Perfil", new_user_path %></li>
           </ul>
         </nav>
         <nav class="main">

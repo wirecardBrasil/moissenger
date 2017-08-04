@@ -11,5 +11,4 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs &&
 
 COPY . /moissenger
 
-RUN chmod +x /moissenger/scripts/entrypoint.sh
-ENTRYPOINT /moissenger/scripts/entrypoint.sh
+EXPOSE 3000

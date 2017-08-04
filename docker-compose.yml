@@ -1,0 +1,16 @@
+version: '2'
+services:
+  web:
+    build:
+      context: .
+      args:
+        BUNDLE_ARGS: ""
+    volumes:
+      - .:/moissenger
+    entrypoint: bundle exec
+    command: [rails s]
+    environment:
+      G_OAUTH_CLIENT_ID: 693253514521-38cg20426ockf20ltjjlanu7qao63hop.apps.googleusercontent.com
+      G_OAUTH_CLIENT_SECRET: RawjYoQPLneSrAdfH3i2cnzm
+    ports:
+      - "3000:8080"

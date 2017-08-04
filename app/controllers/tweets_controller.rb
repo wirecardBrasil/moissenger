@@ -10,7 +10,7 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @user_id = session[:user_id]
+    @user_id = current_user.id
   end
 
   def create    

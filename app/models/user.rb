@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
         email: data["email"],
         name: data["name"],
         user_name: data["email"].split('@')[0],
-        department: "MOIP",
+        department: "Moip",
         about: "",
         provider: access_token.provider,
         uid: access_token.uid,

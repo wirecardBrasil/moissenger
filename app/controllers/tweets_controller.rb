@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_filter :authenticate_user!
-  
+
   def show
     @tweet = Tweet.find(params[:id])
   end
@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
     @user_id = current_user.id
   end
 
-  def create    
+  def create
     Tweet.new(params["tweet"].symbolize_keys).save
     @tweet = Tweet.order("created_at DESC").all
     render "index"
@@ -22,9 +22,7 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    if (params[:user_id] == current_user.id)
-      Tweet.find(params[:id]).destroy
-    end
+    Tweet.find(params[:id]).destroy if params[:user_id] == current_user.id
     @tweet = Tweet.order("created_at DESC").all
     render "index"
   end

@@ -1,7 +1,7 @@
 <h1>Lista de Mensagens</h1>
 
 <% @tweet.each do |t| %>
-  <article class="post">
+  <article class="tweet">
     <div class="title">
       <h2><%= t.tweet %></h2>
       <% if current_user.id == t.user_id %>

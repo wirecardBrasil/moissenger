@@ -1471,6 +1471,7 @@ a {
   transition: color 0.2s ease, border-bottom-color 0.2s ease;
   color: inherit;
   text-decoration: none;
+  font-family: "Raleway", Helvetica, sans-serif;
 
   &::before {
     -moz-transition: color 0.2s ease;

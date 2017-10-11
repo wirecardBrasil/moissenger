@@ -1819,8 +1819,9 @@ form {
   margin: 0 0 2em 0;
 
   input:disabled, textarea:disabled {
-    color: #d9d9d9;
+    color: #f2f2f2;
     background-color: #ccc;
+    cursor: not-allowed;
   }
 
   &.search {

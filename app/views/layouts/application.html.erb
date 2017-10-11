@@ -17,10 +17,10 @@
         <% end %>
         <nav class="links">
           <ul>
-            <li><%= link_to "Nova Mensagem", new_tweet_path %></li>
-            <li><%= link_to "Listar usuários", users_path %></li>
+            <li><%= link_to fa_icon("commenting", text: "Nova Mensagem"), new_tweet_path %></li>
+            <li><%= link_to fa_icon("users", text: "Listar usuários"), users_path %></li>
             <% if current_user.present? && current_user.id.present? %>
-              <li><%= link_to "Editar Perfil", edit_user_path(current_user.id) %></li>
+              <li><%= link_to fa_icon("user-circle", text: "Editar Perfil"), edit_user_path(current_user.id) %></li>
             <% end %>
           </ul>
         </nav>

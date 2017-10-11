@@ -5,7 +5,7 @@
     <div class="title">
       <h2><%= t.tweet %></h2>
       <% if current_user.id == t.user_id %>
-        <p><%= link_to "Deletar", t, method: :delete %></p>
+        <p><%= link_to fa_icon("trash", text: "Deletar"), t, method: :delete %></p>
       <% end %>
     </div>
     <div class="meta">

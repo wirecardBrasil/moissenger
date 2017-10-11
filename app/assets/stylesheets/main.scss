@@ -1817,37 +1817,42 @@ button:disabled:before,
 
 form {
   margin: 0 0 2em 0;
-}
 
-form.search {
-  text-decoration: none;
-  position: relative;
-}
+  input:disabled, textarea:disabled {
+    color: #d9d9d9;
+    background-color: #ccc;
+  }
 
-form.search:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: none !important;
-}
+  &.search {
+    text-decoration: none;
+    position: relative;
+  }
 
-form.search:before {
-  color: #aaaaaa;
-  content: '\f002';
-  display: block;
-  height: 2.75em;
-  left: 0;
-  line-height: 2.75em;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 2.5em;
-}
+  &.search:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+  }
 
-form.search > input:first-child {
-  padding-left: 2.5em;
+  &.search:before {
+    color: #aaaaaa;
+    content: '\f002';
+    display: block;
+    height: 2.75em;
+    left: 0;
+    line-height: 2.75em;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 2.5em;
+  }
+
+  &.search > input:first-child {
+    padding-left: 2.5em;
+  }
 }
 
 label {

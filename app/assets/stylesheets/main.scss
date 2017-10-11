@@ -1471,22 +1471,21 @@ a {
   transition: color 0.2s ease, border-bottom-color 0.2s ease;
   color: inherit;
   text-decoration: none;
-}
 
-a:before {
-  -moz-transition: color 0.2s ease;
-  -webkit-transition: color 0.2s ease;
-  -ms-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-}
+  &::before {
+    -moz-transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+  }
 
-a:hover {
-  border-bottom-color: transparent;
-  color: #2ebaae !important;
-}
-
-a:hover:before {
-  color: #2ebaae !important;
+  &:hover {
+    border-bottom-color: transparent;
+    color: #2ebaae !important;
+    &::before {
+      color: #2ebaae !important;
+    }
+  }
 }
 
 strong, b {
@@ -1499,6 +1498,7 @@ em, i {
 }
 
 p {
+  font-family: "Raleway", Helvetica, sans-serif;
   margin: 0 0 2em 0;
 }
 
@@ -1510,11 +1510,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.65;
   margin: 0 0 1em 0;
   text-transform: uppercase;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: inherit;
-  border-bottom: 0;
+  a {
+    color: inherit;
+    border-bottom: 0;
+  }
 }
 
 h2 {
@@ -1627,16 +1626,14 @@ hr.major {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-.author .name {
-  -moz-transition: border-bottom-color 0.2s ease;
-  -webkit-transition: border-bottom-color 0.2s ease;
-  -ms-transition: border-bottom-color 0.2s ease;
-  transition: border-bottom-color 0.2s ease;
-  // border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
-  display: block;
-  margin: 0 1.5em 0 0;
+  &.name {
+    -moz-transition: border-bottom-color 0.2s ease;
+    -webkit-transition: border-bottom-color 0.2s ease;
+    -ms-transition: border-bottom-color 0.2s ease;
+    transition: border-bottom-color 0.2s ease;
+    display: block;
+    margin: 0 1.5em 0 0;
+  }
 }
 
 .author:hover .name {

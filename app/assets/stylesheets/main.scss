@@ -2947,11 +2947,9 @@ body.is-menu-visible #menu {
 }
 
 @media screen and (max-width: 736px) {
-
   #menu > * {
     padding: 1.5em;
   }
-
 }
 
 .dropdown-menu {
@@ -2959,5 +2957,6 @@ body.is-menu-visible #menu {
 }
 
 .logout {
-  width: 100px;
+  width: 7em;
+  padding-left: 1em;
 }

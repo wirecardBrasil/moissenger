@@ -1,11 +1,11 @@
 <h1>Lista de Mensagens</h1>
 
 <% @tweet.each do |t| %>
-  <article class="post">
+  <article class="tweet">
     <div class="title">
       <h2><%= t.tweet %></h2>
       <% if current_user.id == t.user_id %>
-        <p><%= link_to "Deletar", t, method: :delete %></p>
+        <p><%= link_to fa_icon("trash", text: "Deletar"), t, method: :delete %></p>
       <% end %>
     </div>
     <div class="meta">
@@ -14,7 +14,7 @@
         <span class="name">
           <%= t.user_id.present? ? t.user.name : "Sem user no banco de dados" %>
         </span>
-        <img src="images/Asset1.png" alt="" height="35px"/>
+        <img src="images/Asset1.png" alt="Logo do Moissenger" class="small-user-img"/>
       </a>
     </div>
   </article>

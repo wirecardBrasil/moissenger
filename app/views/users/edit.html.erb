@@ -6,15 +6,15 @@
     <%= f.text_field :user_name, class: "form-control" %>
   </div>
 
-	<div class="form-group user-spacement">
+  <div class="form-group user-spacement">
     <%= f.label "Nome" %>
     <%= f.text_field :name, class: "form-control" %>
-	</div>
+  </div>
 
-	<div class="form-group user-spacement">
-		<%= f.label "E-mail" %>
-		<%= f.text_field :email, class: "form-control" %>
-	</div>
+  <div class="form-group user-spacement">
+    <%= f.label "E-mail" %>
+    <%= text_field_tag :email, @user.email, class: "form-control", disabled: true %>
+  </div>
 
   <div class="form-group user-spacement">
     <%= f.label "Departamento" %>

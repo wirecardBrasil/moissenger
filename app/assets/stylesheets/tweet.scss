@@ -1,11 +1,14 @@
+$tweet_background: #fff;
+$gray: #eaeaea;
+
 .tweet-btn-space {
   margin-top: 30px;
 }
 
 .tweet {
   padding: 25px 15px 15px 25px;
-  background: #ffffff;
-  border: solid 1px rgba(160, 160, 160, 0.3);
+  background: $tweet_background;
+  border: solid 1px $gray;
   margin-bottom: 1em;
   position: relative;
 
@@ -49,7 +52,7 @@
     }
 
     li {
-      border-left: solid 1px rgba(160, 160, 160, 0.3);
+      border-left: solid 1px $gray;
       display: inline-block;
       font-family: "Raleway", Helvetica, sans-serif;
       font-size: 0.6em;
@@ -127,7 +130,7 @@ ul {
     padding: 0;
 
     li {
-      border-top: dotted 1px rgba(160, 160, 160, 0.3);
+      border-top: dotted 1px $gray;
       margin: 1.5em 0 0 0;
       padding: 1.5em 0 0 0;
     }
@@ -198,7 +201,7 @@ ul {
   -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  background: #ffffff;
+  background: $tweet_background;
   border: solid 1px rgba(160, 160, 160, 0.3);
   margin: 0 0 2em 0;
 }

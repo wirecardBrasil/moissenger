@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  gem 'factory_bot_rails'
+  gem 'devise'
+  gem 'rspec'
 end
 
 group :development do
